@@ -1,0 +1,29 @@
+{% extends "index.html" %}
+{% block body %}
+<br> <br>
+<div class="container">
+    <h1>Contact Us</h1>
+    <p>Please fill out the form below to get in touch with us.</p>
+    <form action="#" method="POST">
+        {% csrf_token %}
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="age">Age</label>
+        <input type="text" id="email" name="age" required>
+
+        <label for="gender">Gender</label>
+        <input type="text" id="gender" name="gender" required>
+
+        <label for="mobile">Mobile Nmber</label>
+        <input type="text" id="mobile" name="mobile" required>
+
+        <label for="message">message</label>
+        <textarea id="message" name="message" required></textarea>
+       
+
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+{% endblock body %}

@@ -1,0 +1,38 @@
+{% extends "index.html" %}
+{% load static %}
+{% block body %}
+
+{% for data in posts %}
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <img src="{{data.cover.url}}" width="300">
+        <h5 class="card-title">Title: {{data.title}}</h5>
+        <p class="card-text">Caption: {{data.caption}}</p>
+        <p class="card-text">Content: {{data.content}}</p>
+        <a href="detail/{{data.id}}">
+            <button type="button" class="btn btn-info">See in details</button>
+        </a>
+        <!-- <div>
+          <a href="{% url 'comment' %}">Add Comments</a>
+        </div> -->
+        <p>Add a Comment</p>
+        
+        
+       
+      </div>
+    </div>
+  </div>
+</div>
+<br> <br>
+
+
+{% endfor %}
+
+<ul>
+  {% for comment in comments %}
+      <li>{{ comment.name }} said: {{ comment.text }}</li>
+  {% endfor %}
+</ul>
+  
+{% endblock body %}

@@ -1,0 +1,26 @@
+{% extends "index.html" %}
+{% load static %}
+{% block body %}
+
+<form method="POST" action="">
+    <!-- {% csrf_token %} -->
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Title</label>
+      <input type="text" class="form-control" id="title" name="title">
+    </div>
+
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Caption</label>
+        <input type="text" class="form-control" id="caption" name="caption">
+    </div>
+
+    <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">Content</label>
+        <textarea class="form-control" id="content" name="content" rows="3"></textarea>
+      </div>
+
+   
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+  
+{% endblock body %}

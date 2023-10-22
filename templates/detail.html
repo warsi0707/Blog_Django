@@ -1,0 +1,22 @@
+{% extends "index.html" %}
+{% block body %}
+<div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Title: {{data.title}}</h5>
+        <p class="card-text">Caption: {{data.caption}}</p>
+        <p class="card-text">Content: {{data.content}}</p>
+        
+       
+        <a href="delete/{{data.id}}">
+          <button type="button" class="btn btn-danger">Delete</button>
+      </a>
+      
+      <a href="{% url 'home_page' %}">
+      <button type="button" class="btn btn-info">Back to Home page</button>
+    </a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock body %}

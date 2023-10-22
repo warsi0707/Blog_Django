@@ -1,0 +1,11 @@
+{% extends "index.html" %}
+{% load static %}
+
+{% block body %}
+<body>
+    <div class="container">
+        <h1>Thank you for contacting us!</h1>
+        <p>Your message has been successfully submitted. We will get back to you soon.</p>
+        <a href="{% url 'home_page' %}">Go back to the Home page</a>
+    </div>
+{% endblock body %}
